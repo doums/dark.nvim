@@ -24,7 +24,15 @@ Then load the colorscheme in your config
 vim.cmd('colorscheme dark')
 ```
 
-#### Credits
+### Palette
+
+The color palette is exported
+
+```lua
+local p = require('dark').p
+```
+
+### Credits
 
 [JetBrains](https://www.jetbrains.com/) IDEs for the "Dark" theme palette
 
