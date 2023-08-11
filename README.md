@@ -1,5 +1,7 @@
 ## Dark.nvim
 
+![dark](https://github.com/doums/dark.nvim/assets/6359431/df561063-7bea-419a-9fc3-6bf1c13b045f)
+
 :moon: A dark colorscheme for [nvim](https://neovim.io/)
 
 ### Install
