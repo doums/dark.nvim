@@ -4,6 +4,14 @@
 
 :moon: A dark colorscheme for [nvim](https://neovim.io/)
 
+### Defined HL groups
+
+- builtin groups (`:h highlight-groups`)
+- common groups (`:h group-name`)
+- Treesitter (`:h treesitter-highlight-groups`)
+- builtin terminal colors
+- some arbitrary [groups](https://github.com/doums/dark.nvim/blob/b0a8a76279eeb62149c5c8cfefd3026f70da073f/lua/dark/hl.lua#L35)
+
 ### Install
 
 As usual using your plugin manager, e.g. lazy.nvim
