@@ -1,6 +1,6 @@
 ## Dark.nvim
 
-:moon: A dark [nvim](https://neovim.io/) colorscheme
+:moon: A dark colorscheme for [nvim](https://neovim.io/)
 
 ### Install
 
