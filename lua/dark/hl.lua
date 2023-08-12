@@ -178,11 +178,15 @@ function M.init()
   g.terminal_color_15 = p.ansi_b_white
 
   -- Treesitter
+  li('@text', 'Fg')
   li('@text.literal', 'Fg')
   li('@text.reference', 'Comment')
   hl('@text.title', p.constant, nil, { 'italic' })
   hl('@text.uri', p.todo, nil, 'italic')
+  hl('@text.strong', p.fg, nil, 'bold')
+  hl('@text.emphasis', p.fg, nil, 'italic')
   hl('@text.underline', p.fg, nil, 'underline')
+  hl('@text.strike', p.fg, nil, 'strikethrough')
   li('@text.todo', 'Todo')
   li('@text.warning', 'Todo') -- used for highlight "TODO" in comment
   li('@comment', 'Comment')
@@ -237,7 +241,6 @@ function M.init()
   hl('@strong', p.fg, nil, 'bold')
   hl('@emphasis', p.fg, nil, 'italic')
   hl('@strike', p.fg, nil, 'strikethrough')
-  li('@text', 'Fg')
   li('@math', 'Special')
   li('@environment', 'Macro')
   li('@environment.name', 'Type')
