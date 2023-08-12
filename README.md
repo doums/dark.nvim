@@ -19,7 +19,7 @@ As usual using your plugin manager, e.g. lazy.nvim
 ```lua
 local P = {
   'doums/dark.nvim',
-  lazy = true,
+  lazy = false,
   priority = 1000,
 }
 
