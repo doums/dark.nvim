@@ -86,6 +86,9 @@ function M.init()
   hl('NonText', p.comment)
   hl('Normal', p.fg, p.bg)
   li('NormalFloat', 'Pmenu')
+  hl('FloatBorder', p.fg, p.menu)
+  li('FloatTitle', 'Todo')
+  li('FloatFooter', 'Comment')
   li('NormalNC', 'Fg')
   hl('Pmenu', p.fg, p.menu)
   hl('PmenuSel', nil, p.menu_sel)
@@ -157,7 +160,6 @@ function M.init()
   hl('RedrawDebugClear', p.fg, p.duplicate_from_server)
   hl('RedrawDebugComposed', p.fg, p.search)
   li('RedrawDebugRecompose', 'Error')
-  hl('FloatBorder', p.fg, p.menu)
 
   -- builtin terminal colors
   g.terminal_color_0 = p.ansi_black
