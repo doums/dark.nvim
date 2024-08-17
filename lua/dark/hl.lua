@@ -69,7 +69,9 @@ function M.init()
   -- TermCursor
   -- TermCursorNC
   li('ErrorMsg', 'Error')
+  -- TODO deprecated, to be removed
   hl('VertSplit', p.comment)
+  hl('WinSeparator', p.ui_frame_fg)
   hl('Folded', p.folded_fg, p.folded_bg)
   hl('FoldColumn', p.comment)
   hl('SignColumn', nil, nil)
@@ -77,7 +79,11 @@ function M.init()
   li('CurSearch', 'IncSearch')
   li('Substitute', 'Search')
   hl('LineNr', p.fg)
+  -- LineNrAbove
+  -- LineNrBelow
   hl('CursorLineNr', p.constant, nil, 'bold')
+  -- CursorLineFold
+  -- CursorLineSign
   hl('MatchParen', nil, p.match_brace)
   hl('ModeMsg', p.std_output)
   li('MsgArea', 'Fg')
@@ -92,18 +98,27 @@ function M.init()
   li('NormalNC', 'Fg')
   hl('Pmenu', p.fg, p.menu)
   hl('PmenuSel', nil, p.menu_sel)
+  -- PmenuKind
+  -- PmenuKindSel
+  -- PmenuExtra
+  -- PmenuExtraSel
   hl('PmenuSbar', p.menu, p.menu)
   hl('PmenuThumb', p.menu_thumb, p.menu_thumb)
+  -- PmenuMatch
+  -- PmenuMatchSel
   li('Question', 'Fg')
   hl('QuickFixLine', nil, p.selection)
   hl('Search', nil, p.search)
+  -- SnippetTabstop
   li('SpecialKey', 'NonText')
-  hl('SpellBad', p.typo, nil, 'underline')
+  hl('SpellBad', nil, nil, 'underdashed', p.typo)
   li('SpellCap', 'SpellBad')
   li('SpellLocal', 'SpellBad')
   li('SpellRare', 'SpellBad')
   hl('StatusLine', p.fg, p.ui_frame_bg)
   hl('StatusLineNC', p.ui_frame_fg, p.bg)
+  -- StatusLineTerm
+  -- StatusLineTermNC
   hl('TabLine', p.ui_frame_fg, p.bg)
   hl('TabLineFill', p.ui_frame_bg, p.bg)
   hl('TabLineSel', p.fg, p.ui_frame_bg)
@@ -115,7 +130,6 @@ function M.init()
   li('WildMenu', 'PmenuSel')
   li('WinBar', 'StatusLine')
   li('WinBarNC', 'StatusLineNC')
-  hl('WinSeparator', p.ui_frame_fg)
 
   -- common groups `:h group-name`
   hl('Comment', p.comment, nil, 'italic')
@@ -149,10 +163,13 @@ function M.init()
   li('Delimiter', 'Keyword')
   hl('SpecialComment', p.comment_tag, nil, 'italic')
   hl('Debug', p.debug, nil, 'italic')
+  hl('Underlined', p.fg, nil, 'underline')
   -- Ignore
   -- Error defined above
-  hl('Underlined', p.fg, nil, 'underline')
   hl('Todo', p.todo, nil, { 'bold', 'italic' })
+  li('Added', 'DiffAdd')
+  li('Changed', 'DiffChange')
+  li('Removed', 'DiffDelete')
 
   -- some other groups
   li('healthSuccess', 'IncSearh')
