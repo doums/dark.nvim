@@ -66,8 +66,6 @@ function M.init()
   hl('DiffDelete', nil, p.diff_delete)
   hl('DiffText', nil, p.diff_text)
   li('EndOfBuffer', 'NonText')
-  -- TermCursor
-  -- TermCursorNC
   li('ErrorMsg', 'Error')
   -- TODO deprecated, to be removed
   hl('VertSplit', p.comment)
