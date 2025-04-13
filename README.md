@@ -9,6 +9,7 @@
 - builtin groups (`:h highlight-groups`)
 - common groups (`:h group-name`)
 - Treesitter (`:h treesitter-highlight-groups`)
+- LSP semantic tokens (`:h lsp-semantic-highlight`)
 - builtin terminal colors
 - some arbitrary [groups](https://github.com/doums/dark.nvim/blob/b0a8a76279eeb62149c5c8cfefd3026f70da073f/lua/dark/hl.lua#L35)
 
