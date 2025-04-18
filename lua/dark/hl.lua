@@ -83,7 +83,7 @@ function M.init()
   hl('IncSearch', nil, p.inc_search)
   li('CurSearch', 'IncSearch')
   li('Substitute', 'Search')
-  hl('LineNr', p.fg)
+  hl('LineNr', p.line_nr)
   -- LineNrAbove
   -- LineNrBelow
   hl('CursorLineNr', p.constant, nil, 'bold')
