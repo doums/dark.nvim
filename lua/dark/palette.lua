@@ -61,6 +61,7 @@ local p = {
   menu_hl = '#589DF6',
   menu_sel = '#2E436E',
   menu_thumb = '#545456',
+  ui_border = '#2C2D2F',
   ui_frame_bg = '#2A2B2D',
   ui_frame_fg = '#8A8D93',
   duplicate_from_server = '#5E5339',
