@@ -11,11 +11,13 @@ local p = require('dark.palette')
 local function hl(name, fg, bg, style, sp)
   local hl_map = { fg = fg, bg = bg, sp = sp }
   if type(style) == 'string' then
-    hl_map[style] = 1
+    hl_map[style] = true
+  elseif vim.islist(style) then
+    vim.iter(style):each(function(p)
+      hl_map[p] = true
+    end)
   elseif type(style) == 'table' then
-    for _, v in ipairs(style) do
-      hl_map[v] = 1
-    end
+    hl_map = vim.tbl_extend('force', hl_map, style)
   end
   vim.api.nvim_set_hl(0, name, hl_map)
 end
@@ -204,7 +206,7 @@ function M.init()
 
   -- Treesitter (:h treesitter-highlight-groups)
   hl('@macro', p.macro)
-  hl('@shebang', p.macro, nil, 'italic')
+  hl('@shebang', p.macro, nil, { 'bold', 'italic' })
   li('@variable', 'Fg')
   hl('@variable.builtin', p.constant, nil, 'italic')
   li('@variable.parameter', '@variable')
@@ -322,6 +324,15 @@ function M.init()
   hl('DiagnosticOk', p.ansi_green, nil)
   li('DiagnosticDeprecated', 'Strikethrough')
   hl('DiagnosticUnnecessary', p.unused)
+
+  -- misc
+  hl('manBold', nil, nil, 'italic')
+  li('manHeader', '@label')
+  li('manFooter', 'manHeader')
+  li('manOptionDesc', '@constant')
+  li('manSectionHeading', 'Keyword')
+  li('manSubHeading', 'Keyword')
+  hl('manReference', p['function'], nil, 'italic')
 end
 
 return M
